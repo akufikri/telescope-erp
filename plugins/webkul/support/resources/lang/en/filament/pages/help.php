@@ -9,6 +9,11 @@ return [
     'heading'    => 'Help & Resources',
     'subheading' => 'Everything you need to get the most out of Telescope ERP.',
 
+    'guides' => [
+        'group'      => 'Module User Guides',
+        'how_to_use' => 'How to Use',
+    ],
+
     'services' => [
         'group' => 'Services',
 
