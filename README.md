@@ -1,14 +1,14 @@
 <p align="center">
-  <a href="https://telescope-erp.com">
+  <a href="https://aureuserp.com">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/telescope-erp/temp-media/main/telescope-logo-dark.png">
       <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/telescope-erp/temp-media/main/telescope-logo-light.png">
-      <img src="https://raw.githubusercontent.com/telescope-erp/temp-media/main/telescope-logo-light.png" alt="Telescope ERP logo">
+      <img src="https://raw.githubusercontent.com/telescope-erp/temp-media/main/telescope-logo-light.png" alt="AureusERP logo">
     </picture>
   </a>  
 </p>
 
-<h1 align="center">Telescope ERP</h1>
+<h1 align="center">AureusERP</h1>
 
 <p align="center">
   <strong>Enterprise Resource Planning for Modern Businesses</strong>
@@ -24,7 +24,7 @@
 
 1. [Introduction](#-introduction)
 2. [Key Features](#-key-features)
-3. [Why Choose Telescope ERP?](#-why-choose-aureus-erp)
+3. [Why Choose AureusERP?](#-why-choose-aureus-erp)
 4. [Requirements](#-requirements)
 5. [Quick Start](#-quick-start)
 6. [Plugin System](#-plugin-system)
@@ -38,14 +38,14 @@
 ---
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/aureuserp/temp-media/main/introduction.png" alt="Telescope ERP Introduction" width="100%">
+  <img src="https://raw.githubusercontent.com/aureuserp/temp-media/main/introduction.png" alt="AureusERP Introduction" width="100%">
 </p>
 
 ## 🚀 Introduction
 
-Telescope ERP is a comprehensive, commercial Enterprise Resource Planning (ERP) solution designed for Small and Medium Enterprises (SMEs) and large-scale organizations. Built on **[Laravel 13](https://laravel.com)**, the most popular PHP framework, and **[FilamentPHP 5](https://filamentphp.com)**, a cutting-edge admin panel framework, Telescope ERP offers an extensible and developer-friendly platform for managing every aspect of your business operations.
+AureusERP is a comprehensive, commercial Enterprise Resource Planning (ERP) solution designed for Small and Medium Enterprises (SMEs) and large-scale organizations. Built on **[Laravel 13](https://laravel.com)**, the most popular PHP framework, and **[FilamentPHP 5](https://filamentphp.com)**, a cutting-edge admin panel framework, AureusERP offers an extensible and developer-friendly platform for managing every aspect of your business operations.
 
-Whether you're managing accounting, inventory, HR, CRM, or projects, Telescope ERP provides a modular approach that grows with your business.
+Whether you're managing accounting, inventory, HR, CRM, or projects, AureusERP provides a modular approach that grows with your business.
 
 ---
 
@@ -116,7 +116,7 @@ Whether you're managing accounting, inventory, HR, CRM, or projects, Telescope E
 
 ---
 
-## 🎯 Why Choose Telescope ERP?
+## 🎯 Why Choose AureusERP?
 
 | Feature | Benefit |
 |---------|---------|
@@ -153,7 +153,7 @@ Ensure your development environment meets the following requirements:
 
 ## ⚡ Quick Start
 
-Get Telescope ERP up and running in just 4 simple steps:
+Get AureusERP up and running in just 4 simple steps:
 
 ### Step 1: Clone the Repository
 
@@ -192,13 +192,13 @@ Visit `http://localhost:8000` and log in with your admin credentials!
 
 ---
 
-## ☁️ Telescope ERP Cloud Hosting
+## ☁️ AureusERP Cloud Hosting
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/aureuserp/temp-media/main/cloud-hosting.png" alt="Telescope ERP Cloud Hosting" width="100%">
+  <img src="https://raw.githubusercontent.com/aureuserp/temp-media/main/cloud-hosting.png" alt="AureusERP Cloud Hosting" width="100%">
 </p>
 
-[Telescope ERP Cloud Hosting](https://aureuserp.com/cloud-hosting/) is a fully managed hosting solution where our team sets up, secures, and configures your Telescope ERP on reliable infrastructure.
+[AureusERP Cloud Hosting](https://aureuserp.com/cloud-hosting/) is a fully managed hosting solution where our team sets up, secures, and configures your AureusERP on reliable infrastructure.
 
 Get a ready-to-use ERP on your own domain, without manual installation or infrastructure complexity, and focus on growing your business while we handle the technology.
 
@@ -207,7 +207,7 @@ Get a ready-to-use ERP on your own domain, without manual installation or infras
 
 ## 🧩 Plugin System
 
-Telescope ERP features a powerful modular plugin system that allows you to customize your ERP installation based on your business needs. Choose only the modules you need to keep your system lean and efficient.
+AureusERP features a powerful modular plugin system that allows you to customize your ERP installation based on your business needs. Choose only the modules you need to keep your system lean and efficient.
 
 ### 📦 Core Plugins (System Plugins)
 
@@ -324,7 +324,7 @@ Some plugins require other plugins to function properly. The installation system
 
 ## 🎨 Customization
 
-Telescope ERP is designed to be highly customizable, allowing you to tailor the system to your specific business needs:
+AureusERP is designed to be highly customizable, allowing you to tailor the system to your specific business needs:
 
 ### Plugin Customization
 - 🔹 Install only the plugins you need
@@ -355,7 +355,7 @@ We welcome contributions from licensed partners and authorized developers. Wheth
 ### How to Contribute
 
 1. **Contact Us**
-   - Reach out to support@telescope-erp.com for contributor access
+   - Reach out to support@aureuserp.com for contributor access
 
 2. **Create a Feature Branch**
    ```bash
@@ -392,7 +392,7 @@ We welcome contributions from licensed partners and authorized developers. Wheth
 
 ## 📄 License
 
-Telescope ERP is a commercial software product. Unauthorized copying, modification, distribution, or use of this software is strictly prohibited.
+AureusERP is a commercial software product. Unauthorized copying, modification, distribution, or use of this software is strictly prohibited.
 
 ### License Terms
 - ✅ Licensed for use by authorized customers only
@@ -404,15 +404,15 @@ Telescope ERP is a commercial software product. Unauthorized copying, modificati
 
 ## 🔒 Security
 
-Security is a top priority for Telescope ERP. We take all security vulnerabilities seriously.
+Security is a top priority for AureusERP. We take all security vulnerabilities seriously.
 
 ### Reporting Security Vulnerabilities
 
 **⚠️ Please DO NOT disclose security vulnerabilities publicly.**
 
-If you discover a security vulnerability in Telescope ERP, please report it responsibly:
+If you discover a security vulnerability in AureusERP, please report it responsibly:
 
-📧 **Email:** support@telescope-erp.com
+📧 **Email:** support@aureuserp.com
 
 ### What to Include
 - Description of the vulnerability
@@ -426,15 +426,15 @@ We will acknowledge your email within 48 hours and provide a detailed response w
 
 ## 💬 Support & Community
 
-Need help or want to connect with other Telescope ERP users?
+Need help or want to connect with other AureusERP users?
 
 ### 📚 Documentation
-- 📖 **Developer Documentation:** [devdocs.telescope-erp.com](https://devdocs.telescope-erp.com/) - Technical guides, API references, and development resources
-- 📘 **User Guide:** [docs.telescope-erp.com](https://docs.telescope-erp.com/) - Step-by-step tutorials and user manuals
+- 📖 **Developer Documentation:** [devdocs.aureuserp.com](https://devdocs.aureuserp.com/) - Technical guides, API references, and development resources
+- 📘 **User Guide:** [docs.aureuserp.com](https://docs.aureuserp.com/) - Step-by-step tutorials and user manuals
 
 ### 🤝 Get Support
-- 🐛 **Issue Tracker:** [Support Portal](https://telescope-erp.com/support/) - Report bugs and request features
-- 📧 **Email Support:** support@telescope-erp.com - Direct support from the team
+- 🐛 **Issue Tracker:** [Support Portal](https://aureuserp.com/support/) - Report bugs and request features
+- 📧 **Email Support:** support@aureuserp.com - Direct support from the team
 
 ### 🔔 Stay Updated
 - ⭐ **Star** this repository to show your support
@@ -445,7 +445,7 @@ Need help or want to connect with other Telescope ERP users?
 
 <div align="center">
 
-Telescope ERP &copy; 2026. All rights reserved.
+AureusERP &copy; 2026. All rights reserved.
 
 [⬆ Back to Top](#-table-of-contents)
 

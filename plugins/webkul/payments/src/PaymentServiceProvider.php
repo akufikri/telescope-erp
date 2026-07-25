@@ -15,6 +15,7 @@ class PaymentServiceProvider extends PackageServiceProvider
     public function configureCustomPackage(Package $package): void
     {
         $package->name(static::$name)
+            ->icon('payments')
             ->hasTranslations()
             ->hasMigrations([
                 '2025_02_10_131418_create_payments_payment_methods_table',

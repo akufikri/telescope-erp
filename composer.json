@@ -4,7 +4,7 @@
     "description": "Telescope ERP - Open Source ERP Solution built on Laravel for Small and Medium Enterprises (SMEs) and large-scale enterprises.",
     "keywords": [
         "erp",
-        "telescope-erp",
+        "aureuserp",
         "laravel",
         "framework"
     ],
@@ -76,7 +76,7 @@
         ],
         "dev": [
             "Composer\\Config::disableProcessTimeout",
-            "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php -d max_execution_time=0 artisan serve\" \"php -d max_execution_time=0 artisan queue:listen --tries=1\" \"php -d max_execution_time=0 artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite"
+            "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php -d max_execution_time=0 -d error_reporting='E_ALL & ~E_NOTICE & ~E_WARNING' artisan serve\" \"php -d max_execution_time=0 artisan queue:listen --tries=1\" \"php -d max_execution_time=0 artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite"
         ]
     },
     "extra": {

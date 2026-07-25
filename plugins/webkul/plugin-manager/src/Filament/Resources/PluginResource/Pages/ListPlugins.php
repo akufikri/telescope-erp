@@ -23,24 +23,9 @@ class ListPlugins extends ListRecords
 
     public function getTabs(): array
     {
-        $extra = [];
-
-        foreach (Plugin::getAllPluginPackages() as $key => $package) {
-            if ($package->icon) {
-                continue;
-            }
-
-            $extra[] = $key;
-        }
-
         return [
             'apps' => Tab::make(__('plugin-manager::filament/resources/plugin/pages/list-plugins.tabs.apps'))
-                ->badge(Plugin::whereNotIn('name', $extra)->count())
-                ->modifyQueryUsing(fn (Builder $query) => $query->whereNotIn('name', $extra)),
-
-            'extra' => Tab::make(__('plugin-manager::filament/resources/plugin/pages/list-plugins.tabs.extra'))
-                ->badge(Plugin::whereIn('name', $extra)->count())
-                ->modifyQueryUsing(fn (Builder $query) => $query->whereIn('name', $extra)),
+                ->badge(Plugin::count()),
 
             'installed' => Tab::make(__('plugin-manager::filament/resources/plugin/pages/list-plugins.tabs.installed'))
                 ->badge(Plugin::where('is_installed', true)->count())

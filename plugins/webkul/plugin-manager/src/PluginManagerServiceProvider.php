@@ -5,7 +5,6 @@ namespace Webkul\PluginManager;
 use Filament\Panel;
 use Filament\Support\Assets\Css;
 use Filament\Support\Facades\FilamentAsset;
-use Illuminate\Support\Facades\Event;
 use Webkul\PluginManager\Console\Commands\FindMissingTranslations;
 use Webkul\PluginManager\Console\Commands\InstallERP;
 
@@ -38,8 +37,6 @@ class PluginManagerServiceProvider extends PackageServiceProvider
         $this->registerCustomCss();
 
         $this->app->make(PermissionManager::class)->managePermissions();
-
-        Event::listen('telescope-erp.installed', 'Webkul\PluginManager\Listeners\Installer@installed');
     }
 
     public function packageRegistered(): void

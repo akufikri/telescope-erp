@@ -39,6 +39,7 @@ class AccountServiceProvider extends PackageServiceProvider
     public function configureCustomPackage(Package $package): void
     {
         $package->name(static::$name)
+            ->icon('accounts')
             ->hasViews()
             ->hasTranslations()
             ->hasRoutes(['api'])

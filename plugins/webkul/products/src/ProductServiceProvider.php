@@ -22,6 +22,7 @@ class ProductServiceProvider extends PackageServiceProvider
     public function configureCustomPackage(Package $package): void
     {
         $package->name(static::$name)
+            ->icon('products')
             ->hasViews()
             ->hasTranslations()
             ->hasRoutes(['api'])

@@ -8,7 +8,6 @@ use Illuminate\Console\Command;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
 use Spatie\Permission\Models\Permission;
@@ -69,8 +68,6 @@ class InstallERP extends Command
         $this->createAdminUser();
 
         $this->markAsInstalled();
-
-        Event::dispatch('telescope-erp.installed');
 
         $this->info('🎉 ERP System installation completed successfully!');
     }
@@ -355,26 +352,6 @@ class InstallERP extends Command
     /**
      * Ask the user to star the GitHub repository.
      */
-    protected function askToStarGithubRepository(): void
-    {
-        if (! $this->confirm('Would you like to star our repo on GitHub?')) {
-            return;
-        }
-
-        $repoUrl = 'https://github.com/telescope-erp/telescope-erp';
-
-        if (PHP_OS_FAMILY == 'Darwin') {
-            exec("open {$repoUrl}");
-        }
-
-        if (PHP_OS_FAMILY == 'Windows') {
-            exec("start {$repoUrl}");
-        }
-
-        if (PHP_OS_FAMILY == 'Linux') {
-            exec("xdg-open {$repoUrl}");
-        }
-    }
 
     /**
      * Storage link command to create a symbolic link from "public/storage" to "storage/app/public".
