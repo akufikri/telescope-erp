@@ -1,4 +1,4 @@
-<p align="center">
+<!-- <p align="center">
   <a href="https://telescopeerp.com">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/telescope-erp/temp-media/main/telescope-logo-dark.png">
@@ -6,7 +6,10 @@
       <img src="https://raw.githubusercontent.com/telescope-erp/temp-media/main/telescope-logo-light.png" alt="Telescope ERP logo">
     </picture>
   </a>
-</p>
+</p> -->
+
+<img width="1983" height="793" alt="ChatGPT Image Jul 25, 2026, 07_19_58 PM" src="https://github.com/user-attachments/assets/3c765a5b-2040-4fe4-80d5-392ece97f8c5" />
+
 
 <h1 align="center">Telescope ERP</h1>
 
