@@ -1,0 +1,29 @@
+<?php
+
+namespace Webkul\Product\Filament\Resources\ProductResource\Pages;
+
+use Filament\Notifications\Notification;
+use Filament\Resources\Pages\CreateRecord;
+use Webkul\Product\Filament\Resources\ProductResource;
+
+class CreateProduct extends CreateRecord
+{
+    protected static string $resource = ProductResource::class;
+
+    public function getSubNavigation(): array
+    {
+        if (filled($cluster = static::getCluster())) {
+            return $this->generateNavigationItems($cluster::getClusteredComponents());
+        }
+
+        return [];
+    }
+
+    protected function getCreatedNotification(): Notification
+    {
+        return Notification::make()
+            ->success()
+            ->title(__('products::filament/resources/product/pages/create-product.notification.title'))
+            ->body(__('products::filament/resources/product/pages/create-product.notification.body'));
+    }
+}

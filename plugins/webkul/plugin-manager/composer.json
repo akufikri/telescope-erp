@@ -1,0 +1,30 @@
+{
+    "name": "webkul/plugin-manager",
+    "description": "Plugin Manager for Telescope ERP",
+    "authors": [
+        {
+            "name": "Telescope ERP",
+            "email": "support@telescope-erp.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Webkul\\PluginManager\\PluginManagerServiceProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Webkul\\PluginManager\\": "src/",
+            "Webkul\\PluginManager\\Database\\Factories\\": "database/factories/",
+            "Webkul\\PluginManager\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Webkul\\PluginManager\\Tests\\": "tests/"
+        }
+    }
+}

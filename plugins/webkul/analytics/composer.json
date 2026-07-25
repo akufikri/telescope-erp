@@ -1,0 +1,30 @@
+{
+    "name": "webkul/analytics",
+    "description": "",
+    "authors": [
+        {
+            "name": "Telescope ERP",
+            "email": "support@telescope-erp.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Webkul\\Analytic\\AnalyticServiceProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Webkul\\Analytic\\": "src/",
+            "Webkul\\Analytic\\Database\\Factories\\": "database/factories/",
+            "Webkul\\Analytic\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Webkul\\Analytic\\Tests\\": "tests/"
+        }
+    }
+}
