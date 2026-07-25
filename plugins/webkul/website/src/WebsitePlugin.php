@@ -10,6 +10,7 @@ use Filament\Panel;
 use Filament\View\PanelsRenderHook;
 use Illuminate\Support\Collection;
 use Webkul\PluginManager\Package;
+use Webkul\Support\Services\ModuleFilter;
 use Webkul\Website\Filament\Customer\Auth\Login;
 use Webkul\Website\Filament\Customer\Auth\PasswordReset\RequestPasswordReset;
 use Webkul\Website\Filament\Customer\Auth\PasswordReset\ResetPassword;
@@ -34,6 +35,10 @@ class WebsitePlugin implements Plugin
     public function register(Panel $panel): void
     {
         if (! Package::isPluginInstalled($this->getId())) {
+            return;
+        }
+
+        if ($panel->getId() == 'customer' && ! ModuleFilter::isActive('website')) {
             return;
         }
 

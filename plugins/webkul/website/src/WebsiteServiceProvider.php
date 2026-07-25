@@ -10,6 +10,7 @@ use Webkul\PluginManager\Console\Commands\InstallCommand;
 use Webkul\PluginManager\Console\Commands\UninstallCommand;
 use Webkul\PluginManager\Package;
 use Webkul\PluginManager\PackageServiceProvider;
+use Webkul\Support\Services\ModuleFilter;
 use Webkul\Website\Http\Responses\LogoutResponse;
 
 class WebsiteServiceProvider extends PackageServiceProvider
@@ -47,7 +48,7 @@ class WebsiteServiceProvider extends PackageServiceProvider
     {
         $this->registerCustomCss();
 
-        if (! Package::isPluginInstalled(self::$name)) {
+        if (! Package::isPluginInstalled(self::$name) || ! ModuleFilter::isActive('website')) {
             Route::get('/', function () {
                 return redirect()->route('filament.admin.auth.login');
             });

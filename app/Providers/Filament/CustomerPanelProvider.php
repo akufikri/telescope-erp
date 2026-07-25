@@ -17,11 +17,20 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Webkul\Support\Services\ModuleFilter;
 
 class CustomerPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
     {
+        if (! ModuleFilter::isActive('website')) {
+            return $panel
+                ->id('customer')
+                ->path('/')
+                ->middleware([])
+                ->authMiddleware([]);
+        }
+
         return $panel
             ->id('customer')
             ->path('/')
