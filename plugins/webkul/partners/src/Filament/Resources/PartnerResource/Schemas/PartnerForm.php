@@ -116,6 +116,7 @@ class PartnerForm
                                     ->imageEditor()
                                     ->avatar()
                                     ->directory('partners/avatar')
+                                    ->disk('public')
                                     ->visibility('public'),
                             ]),
                     ])->columns(2),

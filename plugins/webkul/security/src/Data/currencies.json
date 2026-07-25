@@ -5,7 +5,7 @@
         "decimal_places": "2",
         "full_name": "United States dollar",
         "rounding": 0.01,
-        "active": true,
+        "active": false,
         "name": "USD"
     },
     {
@@ -104,7 +104,7 @@
         "decimal_places": "2",
         "full_name": "Indonesian rupiah",
         "rounding": "0.01",
-        "active": false,
+        "active": true,
         "name": "IDR"
     },
     {

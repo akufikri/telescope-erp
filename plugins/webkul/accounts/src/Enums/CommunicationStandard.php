@@ -6,7 +6,7 @@ use Filament\Support\Contracts\HasLabel;
 
 enum CommunicationStandard: string implements HasLabel
 {
-    case TELESCOPE = 'telescope';
+    case TELESCOPE = 'webkul';
 
     case EUROPEAN = 'european';
 

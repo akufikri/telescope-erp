@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'telescope' => 'Telescope',
+    'webkul' => 'Telescope',
     'european'  => 'Europeo',
 ];

@@ -61,7 +61,7 @@ class PostResource extends Resource
         return __('blogs::filament/admin/resources/post.navigation.title');
     }
 
-    public static function getNavigationGroup(): string | \UnitEnum
+    public static function getNavigationGroup(): string|\UnitEnum
     {
         return NavigationGroup::Website;
     }
@@ -107,7 +107,9 @@ class PostResource extends Resource
                                     ->required(),
                                 FileUpload::make('image')
                                     ->label(__('blogs::filament/admin/resources/post.form.sections.general.fields.banner'))
-                                    ->image(),
+                                    ->image()
+                                    ->disk('public')
+                                    ->directory('blog-images'),
                             ]),
 
                         Section::make(__('blogs::filament/admin/resources/post.form.sections.seo.title'))

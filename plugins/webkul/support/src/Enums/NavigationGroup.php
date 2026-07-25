@@ -4,6 +4,7 @@ namespace Webkul\Support\Enums;
 
 use Filament\Support\Contracts\HasIcon;
 use Filament\Support\Contracts\HasLabel;
+use Webkul\Support\Services\ModuleFilter;
 
 enum NavigationGroup: string implements HasIcon, HasLabel
 {
@@ -70,5 +71,13 @@ enum NavigationGroup: string implements HasIcon, HasLabel
             self::Setting       => 'icon-settings',
             self::Help          => 'icon-help',
         };
+    }
+
+    /**
+     * Check if this navigation group is active based on module configuration.
+     */
+    public function isActive(): bool
+    {
+        return ModuleFilter::isGroupActive($this->value);
     }
 }

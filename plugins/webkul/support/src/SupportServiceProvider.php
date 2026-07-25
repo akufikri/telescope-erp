@@ -2,6 +2,7 @@
 
 namespace Webkul\Support;
 
+use Filament\Navigation\NavigationManager;
 use Filament\Panel;
 use Filament\Support\Assets\Css;
 use Filament\Support\Facades\FilamentAsset;
@@ -18,6 +19,7 @@ use Webkul\Support\Database\Dialects\DatabaseDialect;
 use Webkul\Support\Database\Dialects\MySqlDialect;
 use Webkul\Support\Database\Dialects\PostgresDialect;
 use Webkul\Support\Livewire\QuickNavigation;
+use Webkul\Support\Navigation\ModuleAwareNavigationManager;
 use Webkul\Support\Traits\HasFilamentDefaults;
 use Webkul\Support\Traits\HasRouterMacros;
 use Webkul\Support\Traits\HasRtlSupport;
@@ -103,13 +105,17 @@ class SupportServiceProvider extends PackageServiceProvider
     {
         $this->app->scoped(SettingsRegistry::class);
 
+        $this->app->scoped(NavigationManager::class, function (): NavigationManager {
+            return new ModuleAwareNavigationManager;
+        });
+
         $this->app->singleton(DatabaseDialect::class, function () {
             $driver = DB::connection()->getDriverName();
 
             return match ($driver) {
-                'pgsql' => new PostgresDialect,
+                'pgsql'            => new PostgresDialect,
                 'mysql', 'mariadb' => new MySqlDialect,
-                default => throw new RuntimeException(
+                default            => throw new RuntimeException(
                     "No DatabaseDialect implementation is registered for the [{$driver}] database driver. ".
                     'Supported drivers: mysql, mariadb, pgsql.'
                 ),
