@@ -49,8 +49,8 @@ use Webkul\Security\Filament\Resources\UserResource\Pages\ViewUsers;
 use Webkul\Security\Models\User;
 use Webkul\Security\Settings\UserSettings;
 use Webkul\Security\Traits\HasResourcePermissionQuery;
-use Webkul\Support\Models\Company;
 use Webkul\Support\Enums\NavigationGroup;
+use Webkul\Support\Models\Company;
 
 class UserResource extends Resource
 {
@@ -67,7 +67,7 @@ class UserResource extends Resource
         return __('security::filament/resources/user.navigation.title');
     }
 
-    public static function getNavigationGroup(): string | \UnitEnum
+    public static function getNavigationGroup(): string|\UnitEnum
     {
         return NavigationGroup::Setting;
     }
@@ -190,6 +190,7 @@ class UserResource extends Resource
                                             ->image()
                                             ->imageEditor()
                                             ->directory('users/avatars')
+                                            ->disk('public')
                                             ->visibility('public'),
                                     ])
                                     ->columns(1),

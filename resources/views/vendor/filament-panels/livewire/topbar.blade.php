@@ -43,7 +43,7 @@
             @if ($isAdminPanel)
                 <x-filament::dropdown placement="bottom-start" teleport width="sm">
                     <x-slot name="trigger">
-                        <x-filament::icon-button icon="icon-menu" />
+                        <x-filament::icon-button :icon="\Filament\Support\Icons\Heroicon::OutlinedCog6Tooth" icon-size="lg" />
                     </x-slot>
 
                     <div

@@ -135,7 +135,7 @@ return [
         'manufacturing'  => 'Manufacturing and production management',
         'partners'       => 'Manage business partners',
         'payments'       => 'Manage payments and transactions',
-        'plugin-manager' => 'Plugin Manager for Telescope ERP',
+        'plugin-manager' => 'Plugin Manager for Webkul ERP',
         'products'       => 'Product catalog and variant management',
         'projects'       => 'Project planning and management',
         'purchases'      => 'Procurement and purchase order management',

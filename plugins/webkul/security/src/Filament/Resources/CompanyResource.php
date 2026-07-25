@@ -50,9 +50,9 @@ use Webkul\Security\Filament\Resources\CompanyResource\Pages\ViewCompany;
 use Webkul\Security\Filament\Resources\CompanyResource\RelationManagers\BranchesRelationManager;
 use Webkul\Security\Settings\UserSettings;
 use Webkul\Security\Traits\HasResourcePermissionQuery;
+use Webkul\Support\Enums\NavigationGroup;
 use Webkul\Support\Models\Company;
 use Webkul\Support\Models\Currency;
-use Webkul\Support\Enums\NavigationGroup;
 
 class CompanyResource extends Resource
 {
@@ -69,7 +69,7 @@ class CompanyResource extends Resource
         return __('security::filament/resources/company.navigation.title');
     }
 
-    public static function getNavigationGroup(): string | \UnitEnum
+    public static function getNavigationGroup(): string|\UnitEnum
     {
         return NavigationGroup::Setting;
     }
@@ -258,6 +258,7 @@ class CompanyResource extends Resource
                                                     ->label(__('security::filament/resources/company.form.sections.branding.fields.company-logo'))
                                                     ->image()
                                                     ->directory('company-logos')
+                                                    ->disk('public')
                                                     ->visibility('public'),
                                             ]),
                                         ColorPicker::make('color')

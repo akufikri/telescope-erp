@@ -94,6 +94,8 @@ class ProductForm
                 FileUpload::make('images')
                     ->image()
                     ->multiple()
+                    ->disk('public')
+                    ->directory('products')
                     ->storeFileNamesIn('products'),
             ]);
     }
