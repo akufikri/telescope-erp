@@ -11,11 +11,16 @@ class ModuleFilter
      */
     public static function getActive(): array
     {
-        if (static::$activeModules === null) {
-            $configured = config('modules.active', ['all']);
+        if (empty(static::$activeModules)) {
+            // config/filament-shield.php loads alphabetically before config/modules.php,
+            // so config('modules.*') can be unset when this runs during that file's parse.
+            // Load modules.php directly in that case instead of caching an empty result.
+            $modules = config('modules') ?? require config_path('modules.php');
+
+            $configured = $modules['active'] ?? ['all'];
 
             if (in_array('all', $configured)) {
-                static::$activeModules = array_keys(config('modules.mapping', []));
+                static::$activeModules = array_keys($modules['mapping'] ?? []);
             } else {
                 static::$activeModules = $configured;
             }
